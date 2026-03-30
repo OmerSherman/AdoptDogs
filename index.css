@@ -61,3 +61,95 @@
   box-shadow: 0 4px 14px rgba(90, 124, 111, 0.35);
   transform: translateY(-1px);
 }
+
+#bones-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.bone {
+  position: absolute;
+  font-size: 1.6rem;
+  cursor: pointer;
+  pointer-events: all;
+  transition: transform 0.3s ease;
+  opacity: 0.55;
+}
+
+.bone:hover {
+  transform: scale(1.4) rotate(20deg);
+  opacity: 0.7;
+}
+
+.bone-fact {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #5b63c7;
+  border-radius: 14px;
+  padding: 24px 28px;
+  max-width: 360px;
+  width: 85%;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  border: 4px solid #ff3c00;
+  z-index: 200;
+  animation: factPop 0.3s ease;
+}
+
+.bone-fact p {
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.bone-fact-label {
+  display: block;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.bone-fact-close {
+  padding: 6px 20px;
+  font-size: 0.85rem;
+  background-color: #ff3c00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bone-fact-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 199;
+}
+
+@keyframes factPop {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.bones-hint {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #b0aaa4;
+  margin: 24px 0 30px;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}

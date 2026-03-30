@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function(){
             vaccinated_h.innerHTML = "Vaccinated: " + formatBadge(response['vaccinated'])
             story_h.textContent = response['story']
             adoption_link_h.href = adopt_url.concat(dog_id)
+            
             //add floating hearts on adopt click
             adoption_link_h.addEventListener("click", function(e){
                 e.preventDefault()
