@@ -1,0 +1,131 @@
+.dog-detail {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  padding: 28px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 6px 24px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid;
+  border-image: linear-gradient(90deg, #6b917f, #e07a5f) 1;
+}
+
+#DogImg {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 24px;
+}
+
+#DogName {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.dog-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 20px;
+}
+
+.dog-info h2 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #5a5a5a;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0eeeb;
+}
+
+.dog-info h2:last-child {
+  border-bottom: none;
+}
+
+#Story {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  line-height: 1.75;
+  margin-bottom: 24px;
+  padding: 16px 18px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1.5px solid #b56576;
+}
+
+#Adoption_Link {
+  display: inline-block;
+  padding: 13px 36px;
+  background: linear-gradient(135deg, #4a8c5e, #6b917f);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.01em;
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+#Adoption_Link:hover {
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(74, 140, 94, 0.35);
+  transform: translateY(-1px);
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+#prev-btn, #next-btn {
+  min-width: 100px;
+}
+
+#index_b {
+  background-color: transparent;
+  color: #5a5a5a;
+  border: 2px solid #d5d0cb;
+}
+
+#index_b:hover {
+  background-color: #f0eeeb;
+  color: #2d2d2d;
+  box-shadow: none;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  position: relative;
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 1.2rem;
+  pointer-events: none;
+  animation: floatUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0.9;
+    transform: translateY(0) scale(0.5);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-30px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(0.8);
+  }
+}

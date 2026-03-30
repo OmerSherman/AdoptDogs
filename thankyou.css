@@ -1,0 +1,63 @@
+.thankyou-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 6px 24px rgba(0, 0, 0, 0.05);
+  margin-top: 40px;
+  border-top: 5px solid;
+  border-image: linear-gradient(90deg, #6b917f, #e07a5f) 1;
+}
+
+#Thankyou_title {
+  font-size: 2.4rem;
+  color: #4a8c5e;
+  margin-bottom: 28px;
+}
+
+#dog_img_thankyou {
+  display: block;
+  margin: 0 auto 18px;
+  width: 100%;
+  max-width: 340px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#dog_name_thankyou {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+#mesaggety {
+  color: #4a8c5e;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.BackHome {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 13px 36px;
+  background: linear-gradient(135deg, #6b917f, #5a7c6f);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.BackHome:hover {
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(90, 124, 111, 0.35);
+  transform: translateY(-1px);
+}

@@ -1,0 +1,63 @@
+.Dogs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.Dog {
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+  width: 290px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.Dog:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.Dog img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0;
+}
+
+.Dog h2 {
+  margin: 16px 0 4px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 14px;
+  color: #1a1a1a;
+}
+
+.Dog a {
+  display: inline-block;
+  margin: 10px 0 20px;
+  padding: 9px 28px;
+  background: linear-gradient(135deg, #6b917f, #5a7c6f);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.Dog a:hover {
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(90, 124, 111, 0.35);
+  transform: translateY(-1px);
+}

@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <head>
-
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dog.css">
 </head>
 <body>
-    <h1 id="DogName"></h1>
-    <img id="DogImg">
-    <h2 id="Breed"></h2>
-    <h2 id="Age"></h2>
-    <h2 id="House_Trained"></h2>
-    <h2 id="Vaccinated"></h2>
-    <p id="Story"></p>
-    <a href="" id="Adoption_Link">Adopt Me!</a>
-    <button id = "prev-btn">Prev</button>
-    <button id="next-btn">Next</button>
-    <button id="index_b">Back to list</button>
+    <div class="dog-detail">
+        <h1 id="DogName"></h1>
+        <img id="DogImg">
+        <div class="dog-info">
+            <h2 id="Breed"></h2>
+            <h2 id="Age"></h2>
+            <h2 id="Sex"></h2>
+            <h2 id="House_Trained"></h2>
+            <h2 id="Vaccinated"></h2>
+        </div>
+        <p id="Story"></p>
+        <div class="actions">
+            <a href="" id="Adoption_Link">Adopt Me!</a>
+        </div>
+        <div class="nav-buttons">
+            <button id="prev-btn">Prev</button>
+            <button id="index_b">Back to list</button>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
     <script src="script.js"></script>
     <script src="dog.js"></script>
 </body>
