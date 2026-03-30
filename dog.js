@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function(){
-    function load_dog_data(){
+function load_dog_data(){
         let adopt_url = "adopt.html?id="
         //get all the DOM elements 
        
         let dog_name_h = document.getElementById("DogName")
+        let dog_name_details_h = document.getElementById("DogName_details")
         let dog_img_h = document.getElementById("DogImg");
         let breed_h = document.getElementById("Breed");
         let age_h = document.getElementById("Age");
@@ -21,13 +21,14 @@ document.addEventListener("DOMContentLoaded", function(){
         getDogById(dog_id).then(response => {
             //response is expected to be JSON object of a dog
             dog_name_h.textContent = response['name'] + " Details"
+            dog_name_details_h .textContent = "Name: "+ response['name']
             dog_img_h.src = response['first_image_url']
             breed_h.textContent = "Breed: " + response['breed']
             age_h.textContent = "Age: " + response['age']
             sex_h.textContent = "Sex: " + response['sex']
             house_trained_h.innerHTML = "House Trained: " + formatBadge(response['house_trained'])
             vaccinated_h.innerHTML = "Vaccinated: " + formatBadge(response['vaccinated'])
-            story_h.textContent = response['story']
+            story_h.innerHTML = `Story: <br> ${response['story']}`;
             adoption_link_h.href = adopt_url.concat(dog_id)
             
             //add floating hearts on adopt click
@@ -77,5 +78,5 @@ document.addEventListener("DOMContentLoaded", function(){
 
         })
     }
-    load_dog_data()
-})
+document.addEventListener("DOMContentLoaded",load_dog_data)  
+

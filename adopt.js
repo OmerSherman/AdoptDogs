@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
-    function load_adopt(){
+ function load_adopt(){
         let thankyou_url = "thankyou.html?id="
         let title = document.getElementById("adopt_title")
         let img = document.getElementById("img")
@@ -12,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
         })
         form.addEventListener('submit', function(event){
             event.preventDefault();
+            //post to API 
             fetch(mock_server_url + "/" + dog_id, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
@@ -25,5 +25,4 @@ document.addEventListener("DOMContentLoaded", function(){
             })
         })
     }
-    load_adopt()
-})
+document.addEventListener("DOMContentLoaded", load_adopt)

@@ -1,6 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
-    const dogCards = document.getElementsByClassName("Dog")
-
+    
     function load_dog_data(dog_card, index){
         let dog_card_img = dog_card.querySelector('img')
         let dog_card_h2 = dog_card.querySelector('h2')
@@ -14,13 +12,16 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     function load_dogs(){
+        const dogCards = document.getElementsByClassName("Dog")
+
         let i = 1
         for(element of dogCards){
             load_dog_data(element, i++)
         }
+        load_bones()
     }
-    load_dogs()
-
+    
+function load_bones(){
     let boneFacts = [
         "Dogs have about 1,700 taste buds. Humans have about 9,000!",
         "A dog's nose print is unique, just like a human fingerprint.",
@@ -81,4 +82,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         bonesContainer.appendChild(bone)
     }
-})
+}
+
+document.addEventListener("DOMContentLoaded", load_dogs)
+

@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
-    function load_ty(){
+function load_ty(){
         let dog_id = getDogIdFromURL()
         
         let dog_img = document.getElementById('dog_img_thankyou')
@@ -10,5 +9,4 @@ document.addEventListener("DOMContentLoaded", function(){
             dog_name.textContent = response['name']
         })
     }
-    load_ty()
-})
+document.addEventListener("DOMContentLoaded", load_ty)
